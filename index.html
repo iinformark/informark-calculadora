@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informark</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <div class="topo">
+        <p class="badge">APP</p>
+        <h1>Informark</h1>
+        <p class="subtitulo">Simule 1, 2 ou 3 parcelamentos ao mesmo tempo.</p>
+      </div>
+
+      <form id="calcForm" class="formulario">
+        <div class="grid-2">
+          <label>
+            Nome do produto
+            <input type="text" id="produto" placeholder="Ex: iPhone 16 Pro 128GB" />
+          </label>
+
+          <label>
+            Valor à vista (R$)
+            <input type="number" id="valor" step="0.01" min="0" placeholder="Ex: 5250" required />
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label>
+            Entrada (opcional) (R$)
+            <input type="number" id="entrada" step="0.01" min="0" placeholder="Ex: 1000" />
+          </label>
+
+          <label>
+            Quantas simulações deseja fazer?
+            <select id="qtdSimulacoes">
+              <option value="1">1 simulação</option>
+              <option value="2" selected>2 simulações</option>
+              <option value="3">3 simulações</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="grid-4">
+          <div class="simulacao-bloco" id="bloco1">
+            <label>
+              Simulação 1
+              <select id="parcela1"></select>
+            </label>
+          </div>
+
+          <div class="simulacao-bloco" id="bloco2">
+            <label>
+              Simulação 2
+              <select id="parcela2"></select>
+            </label>
+          </div>
+
+          <div class="simulacao-bloco" id="bloco3">
+            <label>
+              Simulação 3
+              <select id="parcela3"></select>
+            </label>
+          </div>
+        </div>
+
+        <div class="botoes">
+          <button type="submit" class="btn-primario">Calcular</button>
+          <button type="button" id="btnLimpar" class="btn-secundario">Limpar</button>
+          <button type="button" id="btnCopiar" class="btn-secundario">Copiar mensagem</button>
+        </div>
+      </form>
+
+      <section class="mensagem-box">
+        <h2>Mensagem pronta</h2>
+        <textarea id="mensagemPronta" readonly></textarea>
+        <p class="rodape-info">Padrão inicial: 2 simulações em 12x e 18x.</p>
+      </section>
+    </section>
+  </main>
+
+ <script src="app.js"></script>
+</body>
+</html>
