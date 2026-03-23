@@ -103,7 +103,7 @@ const TAXAS = {
 
       if (entrada > 0) {
         linhas.push("💵 Entrada: " + formatBRL(entrada));
-        linhas.push("📌 Saldo no cartão: " + formatBRL(saldo));
+        linhas.push("📌 Saldo no restante: " + formatBRL(saldo));
       }
 
       linhas.push("");
